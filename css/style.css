@@ -1,8 +1,14 @@
+:root {
+  --spezi-lila: #6b5b95;
+  --spezi-gelb: #feb236;
+  --spezi-rot: #d64161;
+  --spezi-orange: #ff7b25;
+}
+
 body {
   margin: 0;
   background-color: floralwhite;
   cursor: url(../images/speed_cursor.png), auto;
-
   }
 
 /****************   Nav Section **********************/
@@ -12,6 +18,7 @@ nav {
   font-weight: bold;
   color: coral;
   padding: 10px;
+  font-family: "Joti One", serif;
 }
 
 /***********************  Footer Section   **************************/
@@ -29,9 +36,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: coral;
+  background-color: var(--spezi-gelb);
   border-radius: 10px;
-
+  font-family: "Kablammo", system-ui;
 }
 
 header h1 {
@@ -47,13 +54,16 @@ header img {
 .address {
   display: flex;
   justify-content: center;
-  color: aquamarine;
+  color: var(--spezi-lila);
   font-style: italic;
+  font-family: "Freckle Face", system-ui;
 }
 
 .tagline {
-  color: lightgreen;
+  color: var(--spezi-lila);
   font-weight: bold;
+  font-family: "Freckle Face", system-ui;
+  text-align: center;
 }
 
 /************* Sections ********************/
@@ -61,7 +71,16 @@ hr {
 
 }
 
-section {
+section h2 {
+  display: inline-block;
+  font-family: "Joti One", serif;
+  color: floralwhite;
+  background-color: var(--spezi-gelb);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+
 }
 
 section h3 {
@@ -77,20 +96,33 @@ dl {
 section dl {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  font-family: "Freckle Face", system-ui;
+  color: var(--spezi-lila);
+
 }
 
 section ul {
-
+  font-family: "Freckle Face", system-ui;
+  list-style-type: none;
+  text-align: center;
+  color: var(--spezi-lila)
 }
 
 section a {
   text-decoration: none;
-  color: lightcoral;
+  color: var(--spezi-gelb);
+}
 
+section {
+  text-align: center;
 }
 
 section a:hover {
   color: coral;
+  cursor: url("../images/speed_pointer.png"), auto;
+}
+
+a {
   cursor: url("../images/speed_pointer.png"), auto;
 }
 
@@ -102,20 +134,31 @@ section a:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.card img {
+div img {
+
 }
 
 .card {
-
   box-shadow: black;
   border-radius: 5px;
-  background-color: aquamarine;
+  background-color: var(--spezi-lila);
+}
+.card ul {
+  color: var(--spezi-gelb);
+  font-family: "Freckle Face", system-ui;
+  text-align: left;
+  list-style-type: disc;
 }
 
+
+.card h3 {
+  color: var(--spezi-gelb);
+}
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
     nav {
       flex-direction: column;
+      justify-content: center;
     }
 
     .three-col {
@@ -139,6 +182,10 @@ textarea {
    color: aquamarine;
 }
 
+label {
+  color: var(--spezi-lila);
+}
+
 /** fonts **/
 .joti-one-regular {
   font-family: "Joti One", serif;
@@ -155,3 +202,9 @@ textarea {
              font-variation-settings:
                "MORF" 0;
            }
+
+.freckle-face-regular {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
